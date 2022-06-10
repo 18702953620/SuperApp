@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:id="@+id/esm_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_school_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@mipmap/ic_state_large_normal"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:cardBackgroundColor="@color/color_ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="1dp"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_school_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_333333"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tv_school_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:singleLine="true"
+                        android:textColor="@color/color_999999"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_school_name"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_school_name" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_school_name"
+                        app:layout_constraintTop_toBottomOf="@id/tv_school_location">
+
+                        <com.shenyuan.superapp.base.widget.PSTextView
+                            android:id="@+id/tv_school_listing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/listing"
+                            android:textColor="@color/color_f8be00"
+                            android:textSize="10sp"
+                            app:ps_border_color="@color/color_f8be00"
+                            app:ps_border_width="1dp"
+                            app:ps_radius="4dp" />
+
+                        <com.shenyuan.superapp.base.widget.PSTextView
+                            android:id="@+id/tv_school_bacheior_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="@color/color_0077ff"
+                            android:textSize="10sp"
+                            app:ps_border_color="@color/color_0077ff"
+                            app:ps_border_width="1dp"
+                            app:ps_radius="4dp" />
+
+                        <com.shenyuan.superapp.base.widget.PSTextView
+                            android:id="@+id/tv_school_vocation_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="@color/color_0077ff"
+                            android:textSize="10sp"
+                            app:ps_border_color="@color/color_0077ff"
+                            app:ps_border_width="1dp"
+                            app:ps_radius="4dp" />
+
+                        <com.shenyuan.superapp.base.widget.PSTextView
+                            android:id="@+id/tv_school_diploma_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="@color/color_0077ff"
+                            android:textSize="10sp"
+                            app:ps_border_color="@color/color_0077ff"
+                            app:ps_border_width="1dp"
+                            app:ps_radius="4dp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_school_area"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_school_name"
+                        app:layout_constraintRight_toLeftOf="@id/view_line"
+                        app:layout_constraintTop_toBottomOf="@id/ll_tag"
+                        tools:text="所属区域：西安一区" />
+
+                    <TextView
+                        android:id="@+id/tv_school_area_leader"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_school_name"
+                        app:layout_constraintRight_toLeftOf="@id/view_line"
+                        app:layout_constraintTop_toBottomOf="@id/tv_school_area"
+                        tools:text="区域负责人：刘佳" />
+
+
+                    <ImageView
+                        android:id="@+id/view_line"
+                        android:layout_width="0.5dp"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/ic_school_line"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_school_area_leader"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_school_area" />
+
+
+                    <TextView
+                        android:id="@+id/tv_bachelorEnroll_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@id/view_line"
+                        app:layout_constraintRight_toLeftOf="@id/tv_school_undergraduate"
+                        app:layout_constraintTop_toBottomOf="@id/ll_tag"
+                        tools:text="2020年本科录取人数" />
+
+                    <TextView
+                        android:id="@+id/tv_school_undergraduate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_school_specialty"
+                        app:layout_constraintTop_toBottomOf="@id/ll_tag"
+                        tools:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_vocation_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="@id/view_line"
+                        app:layout_constraintRight_toLeftOf="@id/tv_school_specialty"
+                        app:layout_constraintTop_toBottomOf="@id/tv_school_area"
+                        tools:text="2020年本科录取人数" />
+
+                    <TextView
+                        android:id="@+id/tv_school_specialty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:maxLength="4"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_school_area"
+                        tools:text="15  " />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_edit"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/edit"
+                android:textColor="@color/color_0077ff"
+                android:textSize="17sp"
+                app:ps_background_color="@color/color_dbecff"
+                app:ps_radius="4dp" />
+
+
+        </LinearLayout>
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+</layout>

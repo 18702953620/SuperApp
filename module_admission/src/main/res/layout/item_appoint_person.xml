@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.shenyuan.superapp.base.widget.PSTextView
+            android:id="@+id/tv_person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/ic_dis_person_delete"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/color_0077ff"
+            android:textSize="15sp"
+            app:ps_background_color="@color/color_dbecff"
+            app:ps_radius="4dp" />
+
+    </LinearLayout>
+</layout>

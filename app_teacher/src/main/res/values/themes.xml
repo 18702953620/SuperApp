@@ -1,0 +1,30 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.SuperApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_0077ff</item>
+        <item name="colorPrimaryVariant">@color/color_0077ff</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="colorAccent">@color/color_0077ff</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="fullscreen" parent="Theme.SuperApp">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="splash" parent="fullscreen">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="home_TabLayout" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="line_999999">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_999999</item>
+    </style>
+
+</resources>

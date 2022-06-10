@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.shenyuan.superapp.base.widget.PSTextView
+        android:id="@+id/tv_multple_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:textSize="13sp"
+        app:ps_background_color="@color/color_f5f5f5"
+        app:ps_radius="4dp"
+        tools:text="西安一区">
+
+    </com.shenyuan.superapp.base.widget.PSTextView>
+</layout>

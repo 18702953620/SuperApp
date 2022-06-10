@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="picker_most_select">已达到选择上限</string>
+    <string name="picker_more_than_one">请至少选择一个</string>
+    <string name="picker_select_file">选择文件</string>
+</resources>

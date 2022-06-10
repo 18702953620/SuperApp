@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_school_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="目标学校-01"
+                android:textColor="@color/color_0077ff"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_school_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_school_tools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_plan_school_add" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.shenyuan.superapp.common.widget.PickerTextView
+            android:id="@+id/pick_school_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_edit_able="false"
+            app:ps_sim_hint_size="15sp"
+            app:ps_sim_label="学校名称"
+            app:ps_sim_label_text_color="@color/color_333333"
+            app:ps_sim_label_text_size="15sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="false"
+            app:ps_sim_text_color="@color/color_333333" />
+
+
+        <com.shenyuan.superapp.common.widget.SimEditText
+            android:id="@+id/st_school_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_edit_able="false"
+            app:ps_sim_hint_size="15sp"
+            app:ps_sim_label="地址"
+            app:ps_sim_label_text_color="@color/color_999999"
+            app:ps_sim_label_text_size="15sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="false"
+            app:ps_sim_text_color="@color/color_999999" />
+
+        <com.shenyuan.superapp.common.widget.SimEditText
+            android:id="@+id/st_person_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_edit_able="false"
+            app:ps_sim_hint_size="15sp"
+            app:ps_sim_label="学校联系人"
+            app:ps_sim_label_text_color="@color/color_999999"
+            app:ps_sim_label_text_size="15sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="false"
+            app:ps_sim_text_color="@color/color_999999" />
+
+        <com.shenyuan.superapp.common.widget.SimEditText
+            android:id="@+id/st_person_duty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_edit_able="false"
+            app:ps_sim_hint_size="15sp"
+            app:ps_sim_label="联系人职务"
+            app:ps_sim_label_text_color="@color/color_999999"
+            app:ps_sim_label_text_size="15sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="false"
+            app:ps_sim_text_color="@color/color_999999" />
+
+        <com.shenyuan.superapp.common.widget.SimEditText
+            android:id="@+id/st_person_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_edit_able="false"
+            app:ps_sim_hint_size="15sp"
+            app:ps_sim_label="联系人电话"
+            app:ps_sim_label_text_color="@color/color_999999"
+            app:ps_sim_label_text_size="15sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="false"
+            app:ps_sim_text_color="@color/color_999999" />
+
+        <View style="@style/line_d8d8d8" />
+
+        <com.shenyuan.superapp.common.widget.PickerTextView
+            android:id="@+id/pick_good_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_hint="请选择"
+            app:ps_sim_hint_size="17sp"
+            app:ps_sim_input_type="phone"
+            app:ps_sim_label="是否制作喜报"
+            app:ps_sim_label_text_color="@color/color_333333"
+            app:ps_sim_label_text_size="17sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="true" />
+
+        <View style="@style/line_d8d8d8" />
+
+        <com.shenyuan.superapp.common.widget.SimEditText
+            android:id="@+id/st_gift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_hint="请输入"
+            app:ps_sim_hint_size="17sp"
+            app:ps_sim_input_type="number"
+            app:ps_sim_label="礼品需求"
+            app:ps_sim_label_text_color="@color/color_333333"
+            app:ps_sim_label_text_size="17sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="true"
+            app:ps_sim_text_color="@color/color_333333" />
+
+        <View style="@style/line_d8d8d8" />
+
+        <com.shenyuan.superapp.common.widget.SimEditText
+            android:id="@+id/st_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_hint="请输入"
+            app:ps_sim_hint_size="17sp"
+            app:ps_sim_label="预计发放资料"
+            app:ps_sim_label_text_color="@color/color_333333"
+            app:ps_sim_label_text_size="17sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="true"
+            app:ps_sim_text_color="@color/color_333333" />
+
+        <View style="@style/line_d8d8d8" />
+
+        <com.shenyuan.superapp.common.widget.PickerTextView
+            android:id="@+id/pick_publicity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_sim_hint="请选择"
+            app:ps_sim_hint_size="17sp"
+            app:ps_sim_input_type="phone"
+            app:ps_sim_label="宣传方式"
+            app:ps_sim_label_text_color="@color/color_333333"
+            app:ps_sim_label_text_size="17sp"
+            app:ps_sim_label_width="140dp"
+            app:ps_sim_show_star="true" />
+
+    </LinearLayout>
+</layout>

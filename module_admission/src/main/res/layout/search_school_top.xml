@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:cardBackgroundColor="@color/color_f5f5f5"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp">
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@null"
+        android:drawableLeft="@mipmap/ic_school_search"
+        android:drawablePadding="10dp"
+        android:padding="8dp"
+        android:text="@string/search"
+        android:textColor="#999999"
+        android:textColorHint="@color/color_999999"
+        android:textSize="16sp" />
+
+</androidx.cardview.widget.CardView>

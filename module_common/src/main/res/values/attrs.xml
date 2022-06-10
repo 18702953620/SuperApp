@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TipEditText">
+        <!-- 左边标题-->
+        <attr name="ps_tip_label" format="string" />
+        <!-- 左边标题文字大小-->
+        <attr name="ps_tip_text_size" format="dimension" />
+        <!-- 左边标题文字颜色-->
+        <attr name="ps_tip_text_color" format="color" />
+        <!-- 输入框提示-->
+        <attr name="ps_tip_hint" format="string" />
+        <!-- 输入框文字大小-->
+        <attr name="ps_tip_hint_size" format="dimension" />
+        <!-- 错误提示-->
+        <attr name="ps_error_text" format="string" />
+        <!-- 错误提示颜色-->
+        <attr name="ps_error_text_color" format="color" />
+        <!-- 是否展示间隔线-->
+        <attr name="ps_error_show_line" format="boolean" />
+        <!-- 是否右边按钮-->
+        <attr name="ps_error_show_button" format="boolean" />
+        <!-- 右边按钮-->
+        <attr name="ps_error_button_res" format="reference" />
+
+        <attr name="ps_error_input_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="phone" value="1" />
+            <enum name="password" value="2" />
+            <enum name="number" value="3" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="DeleteTextView">
+        <!-- 输入框提示-->
+        <attr name="ps_delete_hint" format="string" />
+        <!-- 是否右边按钮-->
+        <attr name="ps_delete_show_button" format="boolean" />
+        <!-- 右边按钮-->
+        <attr name="ps_delete_button_res" format="reference" />
+        <!-- 文字大小-->
+        <attr name="ps_delete_text_size" format="dimension" />
+
+        <attr name="ps_delete_input_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="phone" value="1" />
+            <enum name="password" value="2" />
+            <enum name="number" value="3" />
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="SimEditText">
+        <!-- 左边标题-->
+        <attr name="ps_sim_label" format="string" />
+        <!-- 左边标题宽度-->
+        <attr name="ps_sim_label_width" format="dimension" />
+        <!-- 左边标题文字大小-->
+        <attr name="ps_sim_label_text_size" format="dimension" />
+        <!-- 左边标题文字颜色-->
+        <attr name="ps_sim_label_text_color" format="color" />
+        <!-- 输入框提示-->
+        <attr name="ps_sim_hint" format="string" />
+        <!-- 输入框文字大小-->
+        <attr name="ps_sim_hint_size" format="dimension" />
+        <!-- 输入框文字颜色-->
+        <attr name="ps_sim_text_color" format="dimension" />
+        <!-- 是否展示*-->
+        <attr name="ps_sim_show_star" format="boolean" />
+        <!-- 是否可输入-->
+        <attr name="ps_sim_edit_able" format="boolean" />
+        <!-- 是否可选择-->
+        <attr name="ps_sim_pick_able" format="boolean" />
+        <!-- 单位-->
+        <attr name="ps_sim_show_unit" format="string" />
+        <!-- 最大长度-->
+        <attr name="ps_sim_max_length" format="integer" />
+
+        <attr name="ps_sim_input_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="phone" value="1" />
+            <enum name="password" value="2" />
+            <enum name="number" value="3" />
+            <enum name="numberDecimal" value="4" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="LoopView">
+        <attr name="awv_textsize" format="integer" />
+        <attr name="awv_lineSpace" format="float" />
+        <attr name="awv_centerTextColor" format="integer" />
+        <attr name="awv_outerTextColor" format="integer" />
+        <attr name="awv_dividerTextColor" format="color" />
+        <attr name="awv_itemsVisibleCount" format="integer" />
+        <attr name="awv_isLoop" format="boolean" />
+        <attr name="awv_initialPosition" format="integer" />
+        <attr name="awv_scaleX" format="float" />
+    </declare-styleable>
+
+    <!-- ImagePickerView -->
+    <declare-styleable name="ImagePickerView">
+        <!-- 每行显示的数量-->
+        <attr name="ps_mv_spanCount" format="integer" />
+        <!-- 最大选择数量-->
+        <attr name="ps_mv_maxCount" format="integer" />
+        <!-- 添加图标-->
+        <attr name="ps_mv_add" format="reference" />
+    </declare-styleable>
+</resources>

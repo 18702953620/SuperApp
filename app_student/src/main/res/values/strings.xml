@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">智慧学生</string>
+
+    <string name="bottom_home">首页</string>
+    <string name="bottom_square">办公</string>
+    <string name="bottom_msg">消息</string>
+    <string name="bottom_my">我的</string>
+
+    <string name="title_square">广场</string>
+    <string name="app_message">消息</string>
+
+    <string name="msg_delete">删除</string>
+
+
+    <string name="my_about">关于我们</string>
+    <string name="my_clear">缓存清理</string>
+    <string name="my_edit_password">修改密码</string>
+    <string name="my_order">我的订单</string>
+    <string name="my_integral">我的积分</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="user_number">工号：%s</string>
+
+    <string name="next_version">功能升级中，敬请关注!</string>
+    <string name="clear_cache">是否清理缓存？</string>
+    <string name="sure_clear">确认清理</string>
+
+    <string name="find_new_version">发现新版本</string>
+    <string name="update">立即升级</string>
+
+    <string name="search_hot">搜索发现</string>
+    <string name="search_history">搜索历史</string>
+
+    <string name="more_title">更多</string>
+    <string name="more_my_application">我的应用</string>
+    <string name="more_cancel">取消</string>
+    <string name="more_sure">确定</string>
+    <string name="menu_exist">已经存在了</string>
+    <string name="save_content">是否保存已编辑内容？</string>
+    <string name="save">保存</string>
+    <string name="option_my_app">管理我的应用</string>
+
+
+    <string name="edit_password_title">修改密码</string>
+    <string name="edit_input_old_password">请输入原密码</string>
+    <string name="edit_default_passwrod">注：默认密码为身份证后六位</string>
+    <string name="edit_input_new_password">请输入新密码</string>
+    <string name="edit_password_format">注：密码长度8-16位，数字、字母、字符至少包含两种</string>
+    <string name="edit_input_new_password_agin">请再次输入新密码</string>
+
+    <string name="pass_old_not_empty">旧密码不能为空</string>
+    <string name="pass_new_not_empty">新密码不能为空</string>
+    <string name="pass_agin_not_empty">新密码的确认不能为空</string>
+    <string name="pass_new_not_support">新密码长度8-16位，数字、字母、字符至少包含两种</string>
+    <string name="pass_new_not_equals_agin">新密码与新密码确认密码不一致</string>
+
+    <string name="user_info_title">个人信息</string>
+    <string name="user_info_head">头像</string>
+    <string name="user_info_number">学号</string>
+    <string name="user_info_tel">手机号</string>
+    <string name="user_info_login_out">退出登录</string>
+
+    <string name="logout_tip">确定要退出登录吗？</string>
+    <string name="loginout_sure">确认退出</string>
+
+    <string name="please_select_pic">请选择图片</string>
+
+    <string name="forgot_input_msg_code">请输入短信验证码</string>
+    <string name="forgot_send_msg">获取验证码</string>
+    <string name="forgot_sure">确定</string>
+    <string name="forgot_verify_code_not_received">收不到验证码？</string>
+
+    <string name="edit_tel_title">更换手机号</string>
+    <string name="edit_tel_new">你的新手机号</string>
+    <string name="edit_tel_use_new_tel_to_login">更换手机号后，可用新手机号登录。</string>
+
+    <string name="forgot_cant_message_code">1、请查看短信是否被安全软件拦截，若是双卡双待手机， 请检查副卡短信情况。\n2、由于运营商网络原因，可能存在短信延迟，请耐心等待 或稍后再试。</string>
+
+    <string name="tel_please_input_tel">请输入手机号</string>
+    <string name="tel_please_input_right_tel">请输入正确的手机号</string>
+    <string name="tel_input_msg_code">请输入短信验证码</string>
+    <string name="tel_error_sms_code">短信验证码有误，请退出重试</string>
+
+    <string name="forget_resend">重新发送</string>
+    <string name="forget_reset_time">重新发送(%dS)</string>
+
+    <string name="about_app_name">智慧明德APP</string>
+    <string name="about_agreement">《服务协议》</string>
+    <string name="about_privacy">《隐私政策》</string>
+    <string name="login_hotline">服务热线：029-85603000 转 8015</string>
+    <string name="hotline">029-85603000</string>
+
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="login_vistor">游客登录</string>
+    <string name="login_button">登录</string>
+    <string name="login_input_tel">请输入工号/手机号/身份证号</string>
+    <string name="login_title">统一身份认证</string>
+    <string name="login_agreemnet">我已阅读并同意《服务协议》和《隐私政策》</string>
+    <string name="login_input_pwd">请输入密码</string>
+    <string name="login_input_verify_code">请输入验证码</string>
+    <string name="login_not_tel">该账号暂未绑定手机号</string>51
+    <string name="login_succ">登录成功</string>
+    <string name="vistor_login">游客登录</string>
+    <string name="vistor_input_name">请输入姓名</string>
+    <string name="vistor_input_tel">请输入手机号</string>
+
+
+    <string name="forgot_find_password">找回密码</string>
+    <string name="forgot_can_receive_msg">现在能否接收短信？</string>
+    <string name="forgot_cant">不能</string>
+    <string name="forgot_can">能</string>
+    <string name="forgot_call_hotline">请联系服务热线</string>
+    <string name="forgot_cancle">取消</string>
+    <string name="forgot_call_phone">拨打热线</string>
+    <string name="forgot_reset_password">重置密码</string>
+    <string name="forgot_please_reset_your_password">请重设您的账号密码</string>
+    <string name="forgot_input_new_password">请输入新密码</string>
+    <string name="forgot_input_password_agin">请再次输入确认密码</string>
+    <string name="forgot_password_rule">密码长度8-16位，数字、字母、字符至少包含两种</string>
+    <string name="forgot_submit">提交</string>
+    <string name="forgot_next">下一步</string>
+    <string name="forgot_refresh">看不清？请点击刷新！</string>
+    <string name="forgot_verify_code">图片验证码</string>
+    <string name="forgot_reset_password_title">重置密码</string>
+    <string name="forgot_safe_title">安全验证</string>
+    <string name="forget_tel_not_empty">手机号不能为空</string>
+    <string name="forget_please_input_verify_code">请输入验证码</string>
+    <string name="forget_verify_code_invalid">验证码无效，请重新获取</string>
+    <string name="forget_error_tel">手机号有误，请检查</string>
+    <string name="forget_please_input_sms_code">请输入短信验证码</string>
+    <string name="forget_error_sms_code">短信验证码有误，请退出重试</string>
+    <string name="forget_we_send_sms">为确认身份，我们将发送一条短信验证码至 %s的手机</string>
+    <string name="forget_new_pwd_not_empty">新密码不能为空</string>
+    <string name="forget_new_pwd_agin_not_empty">新密码确认密码不能为空</string>
+    <string name="your_tel">您的手机号%s</string>
+    <string name="loginout">是否确认退出？</string>
+    <string name="please_log_in_directly">您已是认证用户，请直接登录</string>
+    <string name="tel_used">该手机号已被使用</string>
+</resources>

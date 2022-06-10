@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/color_999999"
+            android:layout_height="match_parent">
+
+            <cn.bingoogolapple.qrcode.zxing.ZXingView
+                android:id="@+id/zxingview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:qrcv_animTime="1000"
+                app:qrcv_barcodeRectHeight="120dp"
+                app:qrcv_borderColor="@android:color/transparent"
+                app:qrcv_borderSize="1dp"
+                app:qrcv_cornerColor="@android:color/white"
+                app:qrcv_cornerDisplayType="center"
+                app:qrcv_cornerLength="0dp"
+                app:qrcv_cornerSize="3dp"
+                app:qrcv_customScanLineDrawable="@mipmap/ic_scan_scanline"
+                app:qrcv_isAutoZoom="false"
+                app:qrcv_isBarcode="false"
+                app:qrcv_isOnlyDecodeScanBoxArea="false"
+                app:qrcv_isScanLineReverse="false"
+                app:qrcv_isShowDefaultGridScanLineDrawable="false"
+                app:qrcv_isShowDefaultScanLineDrawable="false"
+                app:qrcv_isShowLocationPoint="true"
+                app:qrcv_isShowTipBackground="true"
+                app:qrcv_isShowTipTextAsSingleLine="false"
+                app:qrcv_isTipTextBelowRect="false"
+                app:qrcv_maskColor="@android:color/transparent"
+                app:qrcv_rectWidth="300dp"
+                app:qrcv_scanLineColor="@color/colorPrimaryDark"
+                app:qrcv_scanLineMargin="0dp"
+                app:qrcv_scanLineSize="0.5dp"
+                app:qrcv_tipTextColor="@android:color/white"
+                app:qrcv_tipTextSize="12sp"
+                app:qrcv_toolbarHeight="56dp"
+                app:qrcv_topOffset="65dp"
+                app:qrcv_verticalBias="-1" />
+
+            <com.shenyuan.superapp.base.widget.StatusBar
+                android:id="@+id/statusbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                app:layout_constraintTop_toBottomOf="@id/statusbar">
+
+                <LinearLayout
+                    android:id="@+id/ll_back"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/ic_back_white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_album"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/ic_scan_album" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_flashlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/tv_scan_light"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_scan_light" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_scan_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="50dp"
+                android:text="@string/scan_light_open"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_scan_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="50dp"
+                android:text="仅用于扫码登录，请核实二维码的有效性！"
+                android:textColor="@color/color_ffffff"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

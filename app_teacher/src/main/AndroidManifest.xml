@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shenyuan.superapp">
+    <!--读存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--写存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--网络请求 -->
+    <application
+        android:name=".base.MyApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SuperApp"
+        android:usesCleartextTraffic="true"
+        tools:overrideLibrary="com.roger.gifloadinglibrary">
+
+        <!-- glide配置 -->
+        <meta-data
+            android:name="com.shenyuan.superapp.base.SimpleGlideModule"
+            android:value="GlideModule" />
+
+        <!-- 启动页-->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 主页-->
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTask" />
+        <!-- 登录-->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 授权-->
+        <activity
+            android:name=".ui.login.AuthActivity"
+            android:screenOrientation="portrait" />
+        <!-- 搜索-->
+        <activity
+            android:name=".ui.SearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 扫码-->
+        <activity
+            android:name=".ui.AppCaptureActivity"
+            android:theme="@style/fullscreen" />
+
+
+        <!-- 找回密码-->
+        <activity
+            android:name=".ui.login.forget.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 拨打热线-->
+        <activity
+            android:name=".ui.login.forget.ForgotPasswordHotlineActivity"
+            android:screenOrientation="portrait" />
+        <!-- 验证码-->
+        <activity
+            android:name=".ui.login.forget.ForgotPasswordVerifyActivity"
+            android:screenOrientation="portrait" />
+        <!-- 短信验证码-->
+        <activity
+            android:name=".ui.login.forget.ForgotPasswordMessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 重置密码-->
+        <activity
+            android:name=".ui.login.forget.ForgotPasswordResetActivity"
+            android:screenOrientation="portrait" />
+        <!-- 游客登录-->
+        <!-- 个人信息-->
+        <activity
+            android:name=".ui.login.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改密码-->
+        <activity
+            android:name=".ui.login.EditPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改手机号-->
+        <activity
+            android:name=".ui.login.EditTelActivity"
+            android:screenOrientation="portrait" />
+        <!-- 更多-->
+        <activity
+            android:name=".ui.MoreActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.AboutActivity" />
+        <activity android:name=".ui.exam.ExamActivity" />
+        <activity android:name=".ui.exam.ExamRefuseActivity" />
+        <activity android:name=".ui.data.AdmissionDataActivity" />
+        <activity android:name=".ui.AdvertActivity" />
+        <activity android:name=".ui.data.BigDataActivity" />
+
+
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service
+            android:name=".service.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".service.PushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.shenyuan.superapp" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

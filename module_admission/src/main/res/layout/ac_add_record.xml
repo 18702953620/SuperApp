@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/color_f5f5f5"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/ll_bottom"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.shenyuan.superapp.base.widget.TitleView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ps_title="添加记录" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="@color/color_ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
+
+                <com.shenyuan.superapp.common.widget.PickerTextView
+                    android:id="@+id/pick_intent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_label="意向程度"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_show_star="true" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/connect_record"
+                        android:textColor="@color/color_333333"
+                        android:textSize="17sp" />
+
+                    <View
+                        style="@style/line_d8d8d8"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <EditText
+                        android:id="@+id/et_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="@string/please_input"
+                        android:lines="3"
+                        android:textColorHint="@color/color_999999"
+                        android:maxLength="100"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <com.shenyuan.superapp.common.widget.ImagePickerView
+                        android:id="@+id/pick_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:ps_mv_add="@mipmap/ic_record_add"
+                        app:ps_mv_maxCount="3"
+                        app:ps_mv_spanCount="3" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="微信/QQ跟进可以上传聊天截图，不得超过3张"
+                android:textColor="@color/color_999999"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_rest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/reset"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:ps_background_color="@color/color_eeeeee"
+                app:ps_radius="4dp" />
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/submit"
+                android:textColor="@color/color_ffffff"
+                android:textSize="15sp"
+                app:ps_background_color="@color/color_0077ff"
+                app:ps_radius="4dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

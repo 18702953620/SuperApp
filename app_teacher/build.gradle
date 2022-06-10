@@ -1,0 +1,107 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.shenyuan.superapp"
+        minSdkVersion 21
+        targetSdkVersion 29
+        //必须要保证所有的flavor 都属于同一个维度
+        flavorDimensions "default"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "282e8dc142fa864239743387", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        multiDexEnabled true
+    }
+    signingConfigs {
+        debug {
+            storePassword 'superapp'
+            keyPassword 'superapp'
+            keyAlias = 'super'
+            storeFile file('../key/superapp.jks')
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    android.applicationVariants.all { variant ->
+
+        variant.outputs.all {
+            //修改输出apk名称
+            outputFileName = "${"super-teacher-" + variant.name}-${variant.versionName}.apk"
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+        //139
+        debugs{
+            versionCode 15
+            versionName "1.1.4"
+        }
+        //正式环境
+        releases{
+            versionCode 102
+            versionName "1.0.2"
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation project(path: ':module_common')
+    implementation project(path: ':module_admission')
+    //arouter
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor "com.alibaba:arouter-compiler:1.2.2"
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //dex
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //极光
+    implementation 'cn.jiguang.sdk:jpush:3.9.0'
+    implementation 'cn.jiguang.sdk:jcore:2.6.0'
+}

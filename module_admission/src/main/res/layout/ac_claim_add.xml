@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.shenyuan.superapp.base.widget.TitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_title="@string/claim_business_info_title" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input_claim_name"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_label="@string/claim_name"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="80"
+                    app:ps_sim_show_star="true"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="3dp"
+                            android:text="*"
+                            android:textColor="@android:color/holo_red_light" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/claim_time"
+                            android:textColor="@color/color_333333"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@id/et_text"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/et_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="@string/please_select_start_time"
+                            android:textColorHint="@color/color_999999"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:textColorHint="@color/color_999999"
+                            android:hint="@string/please_select_end_time"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="number"
+                    app:ps_sim_label="@string/claim_business_number"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="3"
+                    app:ps_sim_show_star="true"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_train"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_train_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_public_go_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_back_public_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_section_public_go_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_public_section_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/claim_car_rental_cost"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+
+                        <EditText
+                            android:id="@+id/et_car_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/please_input"
+                            android:inputType="numberDecimal"
+                            android:maxLength="9"
+                            android:textColorHint="@color/color_999999"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/et_car_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@null"
+                            android:hint="@string/input"
+                            android:textColorHint="@color/color_999999"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vehicles"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/et_car_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@null"
+                            android:hint="@string/input"
+                            android:textColorHint="@color/color_999999"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="="
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_car_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:background="@null"
+                            android:hint="@string/calculation"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/price"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_road_toll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_road_toll"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_park"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_park_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_fuel_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_fuel_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_entertain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_entertain_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_hotel_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_subsidy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_personnel_subsidy"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/claim_private_car_cost"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+
+                        <EditText
+                            android:id="@+id/et_pe_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:textColorHint="@color/color_999999"
+                            android:hint="@string/please_input"
+                            android:inputType="numberDecimal"
+                            android:maxLength="9"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/et_pe_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:background="@null"
+                            android:hint="@string/input"
+                            android:inputType="number"
+                            android:textColorHint="@color/color_999999"
+                            android:maxLength="3"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vehicles"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/et_pe_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:background="@null"
+                            android:hint="@string/input"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:textColorHint="@color/color_999999"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="="
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pe_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:background="@null"
+                            android:hint="@string/calculation"
+                            android:textColorHint="@color/color_999999"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/price"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_rem_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_mail_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_oher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_other"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_max_length="9"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_edit_able="false"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_label="@string/claim_total_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.SimEditText
+                    android:id="@+id/st_real"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_edit_able="false"
+                    app:ps_sim_hint="@string/please_input"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_input_type="numberDecimal"
+                    app:ps_sim_label="@string/claim_actual_cost"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp"
+                    app:ps_sim_show_star="false"
+                    app:ps_sim_show_unit="@string/price"
+                    app:ps_sim_text_color="@color/color_333333" />
+
+                <View style="@style/line_d8d8d8" />
+
+                <com.shenyuan.superapp.common.widget.PickerTextView
+                    android:id="@+id/pick_fund_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ps_sim_hint="@string/please_select"
+                    app:ps_sim_hint_size="17sp"
+                    app:ps_sim_label="@string/claim_budget_loan"
+                    app:ps_sim_label_text_color="@color/color_333333"
+                    app:ps_sim_label_text_size="17sp"
+                    app:ps_sim_label_width="150dp" />
+
+
+                <View style="@style/line_d8d8d8" />
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_rest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/save_draft"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_submit"
+                app:layout_constraintTop_toTopOf="parent"
+                app:ps_background_color="@color/color_eeeeee"
+                app:ps_radius="4dp" />
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/edit"
+                android:textColor="@color/color_ffffff"
+                android:textSize="15sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_rest"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5"
+                app:ps_background_color="@color/color_0077ff"
+                app:ps_radius="4dp" />
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/submit_for_review"
+                android:textColor="@color/color_ffffff"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_rest"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:ps_background_color="@color/color_0077ff"
+                app:ps_radius="4dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

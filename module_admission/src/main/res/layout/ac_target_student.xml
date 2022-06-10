@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <com.shenyuan.superapp.base.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_title="分配生源" />
+
+        <LinearLayout
+            android:id="@+id/ll_school_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/search_school_top" />
+        </LinearLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_level"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/color_ffffff"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/color_0077ff"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="bottom"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/color_0077ff"
+            app:tabTextAppearance="@android:style/TextAppearance.Holo.Inverse"
+            app:tabTextColor="@color/color_333333">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.shenyuan.superapp.base.widget.MyRefreshLayout
+            android:id="@+id/mrl_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f5f5f5">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_target"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.shenyuan.superapp.base.widget.MyRefreshLayout>
+
+
+    </LinearLayout>
+</layout>

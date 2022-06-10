@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_picker_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <LinearLayout
+                android:id="@+id/ll_picker_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_picker_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_picker_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="选择文件"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp" />
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_picker_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+                android:text="确定(0/0)"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp"
+                app:ps_background_color="@color/color_ffffff"
+                app:ps_border_color="@color/color_333333"
+                app:ps_border_width="1dp"
+                app:ps_radius="4dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_file_pick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

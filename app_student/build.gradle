@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.shenyuan.superstudent"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "020c821e7438453f574d5170", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        debug {
+            storePassword 'superapp'
+            keyPassword 'superapp'
+            keyAlias = 'super'
+            storeFile file('../key/superapp.jks')
+        }
+    }
+    android.applicationVariants.all { variant ->
+
+        variant.outputs.all {
+            //修改输出apk名称
+            outputFileName = "${"super-student-" + variant.name}-${variant.versionName}.apk"
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    implementation project(path: ':module_common')
+    implementation project(path: ':module_admission')
+    //arouter
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor "com.alibaba:arouter-compiler:1.2.2"
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //dex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //极光
+    implementation 'cn.jiguang.sdk:jpush:3.9.0'
+    implementation 'cn.jiguang.sdk:jcore:2.6.0'
+}

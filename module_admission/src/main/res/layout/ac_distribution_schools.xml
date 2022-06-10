@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f5"
+        android:orientation="vertical">
+
+        <com.shenyuan.superapp.base.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:ps_title="@string/dis_target_school" />
+
+        <LinearLayout
+            android:id="@+id/ll_school_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <include layout="@layout/search_school_top" />
+
+        </LinearLayout>
+
+
+        <com.shenyuan.superapp.base.widget.MyRefreshLayout
+            android:id="@+id/mrl_schools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_school_search">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_schools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:overScrollMode="never" />
+
+        </com.shenyuan.superapp.base.widget.MyRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.shenyuan.superapp.base.widget.TitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_title="@string/exam_title" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_333333"
+                    android:textSize="18sp" />
+
+                <include
+                    android:id="@+id/exam"
+                    layout="@layout/includ_exam" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:text="问题反馈"
+                    android:textColor="@color/color_333333"
+                    android:textSize="18sp" />
+
+                <View
+                    style="@style/line_999999"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        style="@style/line_999999"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_fafafa"
+                            android:gravity="center"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:text="拒接原因"
+                            android:textColor="@color/color_333333" />
+
+                        <View style="@style/line_999999" />
+
+                        <EditText
+                            android:id="@+id/et_refuse"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/please_input"
+                            android:padding="10dp"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/color_999999"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                    <View
+                        style="@style/line_999999"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_999999"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_search_tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_submit"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/submit"
+                android:textColor="@color/color_ffffff"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:ps_background_color="@color/color_0077ff"
+                app:ps_radius="4dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

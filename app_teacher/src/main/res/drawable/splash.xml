@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/color_ffffff" />
+
+    <item
+        android:gravity="top|center_horizontal"
+        android:top="180dp">
+        <bitmap
+            android:gravity="top|center_horizontal"
+            android:src="@mipmap/ic_splash" />
+    </item>
+
+    <item
+        android:bottom="80dp"
+        android:gravity="bottom|center_horizontal">
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:src="@mipmap/ic_splash_text" />
+    </item>
+</layer-list>

@@ -1,0 +1,8 @@
+include ':app_student'
+include ':module_filepicker'
+include ':module_common'
+include ':module_admission'
+include ':module_base'
+include ':app_teacher'
+rootProject.name = "SuperApp"
+include ':module_mvvm'

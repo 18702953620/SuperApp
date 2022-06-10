@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f5"
+        android:orientation="vertical">
+
+        <com.shenyuan.superapp.base.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:ps_title="@string/plan_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <com.shenyuan.superapp.common.widget.SimEditText
+                android:id="@+id/et_plan_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ps_sim_hint="@string/please_input"
+                app:ps_sim_hint_size="17sp"
+                app:ps_sim_label="@string/plan_name"
+                app:ps_sim_label_text_color="@color/color_333333"
+                app:ps_sim_label_text_size="17sp"
+                app:ps_sim_show_star="true" />
+
+            <View style="@style/line_d8d8d8" />
+
+            <com.shenyuan.superapp.common.widget.PickerTextView
+                android:id="@+id/pick_plan_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ps_sim_hint="@string/please_select"
+                app:ps_sim_hint_size="17sp"
+                app:ps_sim_input_type="phone"
+                app:ps_sim_label="@string/plan_info"
+                app:ps_sim_label_text_color="@color/color_333333"
+                app:ps_sim_label_text_size="17sp"
+                app:ps_sim_pick_able="true" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:overScrollMode="never" />
+
+            <View style="@style/line_d8d8d8" />
+
+            <com.shenyuan.superapp.admission.widget.PickerPersonView
+                android:id="@+id/pick_propaganidst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ps_sim_hint_size="17sp"
+                app:ps_sim_label="@string/staff"
+                app:ps_sim_label_text_color="@color/color_333333"
+                app:ps_sim_label_text_size="17sp"
+                app:ps_sim_pick_able="false" />
+
+            <View style="@style/line_d8d8d8" />
+
+            <com.shenyuan.superapp.common.widget.PickerTextView
+                android:id="@+id/pick_fund"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ps_sim_hint="@string/please_select"
+                app:ps_sim_hint_size="17sp"
+                app:ps_sim_label="@string/plan_claim"
+                app:ps_sim_label_text_color="@color/color_333333"
+                app:ps_sim_label_text_size="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_rest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/save_draft"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:ps_background_color="@color/color_eeeeee"
+                app:ps_radius="4dp" />
+
+            <com.shenyuan.superapp.base.widget.PSTextView
+                android:id="@+id/tv_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/submit_for_review"
+                android:textColor="@color/color_ffffff"
+                android:textSize="15sp"
+                app:ps_background_color="@color/color_0077ff"
+                app:ps_radius="4dp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

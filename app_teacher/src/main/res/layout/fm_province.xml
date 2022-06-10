@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_province_bj"
+        android:orientation="vertical">
+
+        <com.shenyuan.superapp.common.widget.chart.CustPieChart
+            android:id="@+id/pc_school"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="@string/data_admission_school"
+            android:textColor="@color/color_fffdfd"
+            android:textSize="18sp" />
+
+        <com.shenyuan.superapp.common.widget.chart.CustBarChart
+            android:id="@+id/bc_school"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp" />
+
+
+    </LinearLayout>
+</layout>

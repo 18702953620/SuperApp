@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/color_ffffff"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_msg_img"
+            android:layout_width="63dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.shenyuan.superapp.base.widget.PSTextView
+            android:id="@+id/tv_msg_new"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginBottom="49dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/iv_msg_img"
+            app:ps_background_color="@color/color_fc602d"
+            app:ps_radius="8dp" />
+
+        <TextView
+            android:id="@+id/tv_msg_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/iv_msg_img"
+            app:layout_constraintRight_toLeftOf="@id/tv_msg_time"
+            app:layout_constraintTop_toTopOf="@id/iv_msg_img" />
+
+        <TextView
+            android:id="@+id/tv_msg_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/color_999999"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_msg_img"
+            app:layout_constraintLeft_toRightOf="@id/iv_msg_img" />
+
+        <TextView
+            android:id="@+id/tv_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/color_999999"
+            android:textSize="10sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_msg_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

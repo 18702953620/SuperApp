@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <com.shenyuan.superapp.base.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_title="@string/school_add" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toTopOf="@id/ll_search_tools"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <com.shenyuan.superapp.common.widget.PickerTextView
+                        android:id="@+id/pick_school_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_select"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/school_name"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.PickerTextView
+                        android:id="@+id/pick_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_select"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_input_type="phone"
+                        app:ps_sim_label="@string/school_class"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_pick_able="false" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.PickerAddressView
+                        android:id="@+id/pick_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/school_city"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/school_address"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_pick_able="false" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.SimEditText
+                        android:id="@+id/et_address_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_input"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/school_address_info"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_max_length="50"
+                        app:ps_sim_show_star="false" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.SimEditText
+                        android:id="@+id/et_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_input"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/school_contact"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_max_length="10" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.SimEditText
+                        android:id="@+id/et_contact_duties"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_input"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/school_contact_duty"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_max_length="15" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.shenyuan.superapp.common.widget.SimEditText
+                            android:id="@+id/et_contact_tel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:ps_sim_hint="@string/please_input"
+                            app:ps_sim_hint_size="17sp"
+                            app:ps_sim_input_type="phone"
+                            app:ps_sim_label="@string/school_contact_tel"
+                            app:ps_sim_label_text_color="@color/color_333333"
+                            app:ps_sim_label_text_size="17sp"
+                            app:ps_sim_max_length="11" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/ic_school_tel" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.SimEditText
+                        android:id="@+id/et_wx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_input"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/school_wx"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_max_length="25"
+                        app:ps_sim_show_star="false" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.SimEditText
+                        android:id="@+id/et_admission_undergraduate_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:ps_sim_edit_able="false"
+                        app:ps_sim_hint_size="16sp"
+                        app:ps_sim_input_type="number"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="16sp"
+                        app:ps_sim_show_star="false" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <com.shenyuan.superapp.common.widget.SimEditText
+                            android:id="@+id/et_admission_specialty_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:ps_sim_edit_able="false"
+                            app:ps_sim_hint_size="16sp"
+                            app:ps_sim_input_type="number"
+                            app:ps_sim_label_text_color="@color/color_333333"
+                            app:ps_sim_label_text_size="16sp"
+                            app:ps_sim_show_star="false" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/school_total"
+                                android:textColor="@color/color_333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_addmission_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:textColor="@color/color_333333"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.shenyuan.superapp.common.widget.PickerTextView
+                        android:id="@+id/pick_level_bachelor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:ps_sim_hint="@string/please_select"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_input_type="phone"
+                        app:ps_sim_label="@string/school_bachelor_level"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_show_star="false" />
+
+                    <com.shenyuan.superapp.common.widget.PickerTextView
+                        android:id="@+id/pick_level_vocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:ps_sim_hint="@string/please_select"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_input_type="phone"
+                        app:ps_sim_label="@string/school_vocation_level"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_show_star="false" />
+
+                    <com.shenyuan.superapp.common.widget.PickerTextView
+                        android:id="@+id/pick_level_diploma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:ps_sim_hint="@string/please_select"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_input_type="phone"
+                        app:ps_sim_label="@string/school_diploma_level"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_show_star="false" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:text="@string/school_is_listing"
+                            android:textColor="@color/color_333333"
+                            android:textSize="17sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_listing_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_check_school"
+                                android:checked="true"
+                                android:paddingStart="10dp"
+                                android:text="@string/yes"
+                                android:textColor="@color/color_999999"
+                                android:textSize="17sp" />
+
+                            <RadioButton
+                                android:id="@+id/rb_listing_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:button="@drawable/selector_check_school"
+                                android:paddingStart="10dp"
+                                android:text="@string/no"
+                                android:textColor="@color/color_999999"
+                                android:textSize="17sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.common.widget.PickerTextView
+                        android:id="@+id/pick_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_select"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/school_area_person"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp" />
+
+                    <View style="@style/line_d8d8d8" />
+
+                    <com.shenyuan.superapp.admission.widget.PickerPersonView
+                        android:id="@+id/pick_propaganidst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ps_sim_hint="@string/please_select"
+                        app:ps_sim_hint_size="17sp"
+                        app:ps_sim_label="@string/staff"
+                        app:ps_sim_label_text_color="@color/color_333333"
+                        app:ps_sim_label_text_size="17sp"
+                        app:ps_sim_show_star="false" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_search_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <com.shenyuan.superapp.base.widget.PSTextView
+                    android:id="@+id/tv_rest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/reset"
+                    android:visibility="gone"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_submit"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:ps_background_color="@color/color_eeeeee"
+                    app:ps_radius="4dp" />
+
+                <com.shenyuan.superapp.base.widget.PSTextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    app:layout_constraintWidth_percent="0.5"
+                    android:paddingBottom="7dp"
+                    android:text="@string/edit"
+                    android:visibility="visible"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_rest"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:ps_background_color="@color/color_0077ff"
+                    app:ps_radius="4dp" />
+
+                <com.shenyuan.superapp.base.widget.PSTextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:visibility="gone"
+                    android:text="@string/sure"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_rest"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:ps_background_color="@color/color_0077ff"
+                    app:ps_radius="4dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

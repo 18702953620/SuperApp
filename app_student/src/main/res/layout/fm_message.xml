@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f5"
+        android:orientation="vertical">
+
+        <com.shenyuan.superapp.base.widget.StatusBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.shenyuan.superapp.base.widget.TitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ps_need_back="false"
+            app:ps_title="@string/app_message"
+            app:ps_title_background_color="@color/color_f5f5f5" />
+
+        <com.shenyuan.superapp.base.widget.MyRefreshLayout
+            android:id="@+id/mrl_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+        </com.shenyuan.superapp.base.widget.MyRefreshLayout>
+
+
+    </LinearLayout>
+</layout>

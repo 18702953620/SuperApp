@@ -1,0 +1,235 @@
+<resources>
+    <string name="app_name">SuperApp</string>
+
+    <string name="select_at_least_one">请至少选择一个</string>
+    <string name="is_delete_school">是否确认删除？</string>
+    <string name="is_dis_school">是否确认分配？</string>
+
+
+    <!--学校库 -->
+    <string name="title_admission_schools">学校库</string>
+    <string name="staff">宣传员</string>
+
+    <string name="school_level">学校层次</string>
+    <string name="school_class_level">学校级别</string>
+    <string name="school_location">学校位置</string>
+    <string name="school_sort">排序</string>
+    <string name="school_search">筛选</string>
+
+    <string name="school_area_label">所属区域：%s</string>
+    <string name="school_person_label">区域负责人：%s</string>
+    <string name="school_total_number">%d年录取总数</string>
+    <string name="school_back_stafe">退回宣传员：%s</string>
+    <string name="school_staff_label">宣传员：%s</string>
+    <string name="school_class">学校库类别</string>
+    <string name="school_address">所在地</string>
+    <string name="school_address_info">详细地址</string>
+    <string name="school_contact">学校联系人</string>
+    <string name="school_contact_duty">联系人职务</string>
+    <string name="school_contact_tel">联系人电话</string>
+    <string name="school_wx">微信/QQ</string>
+    <string name="school_total">合计</string>
+    <string name="school_bachelor_level">本科学校级别</string>
+    <string name="school_vocation_level">专科学校级别</string>
+    <string name="school_diploma_level">专升本学校级别</string>
+    <string name="school_is_listing">是否为挂牌生源基地</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="school_area_person">负责人/区域</string>
+    <string name="school_city">省、市、区县</string>
+    <string name="school_add">添加学校</string>
+
+
+    <string name="delete_school">删除学校信息</string>
+
+
+    <string name="search_hint_text">请输入学校名称搜索</string>
+    <string name="search_history">最近搜索</string>
+
+    <string name="school_back_title">退回库</string>
+    <string name="school_dis_staff">分配宣传员</string>
+    <string name="appoint_staff">指定宣传员</string>
+    <string name="staff_list">宣传员名单</string>
+    <string name="dis_target_school">分配目标学校</string>
+    <string name="target_school">目标学校</string>
+    <string name="distribution">分配</string>
+    <string name="parent_tel">父母手机号</string>
+
+    <string name="back">退回</string>
+    <string name="back_school">退回库信息</string>
+    <string name="school_area">所属区域</string>
+
+    <string name="school_area_leader">区域负责人</string>
+    <string name="school_islising">是否挂牌</string>
+    <string name="school_state">学校状态</string>
+    <string name="school_staff">宣传员</string>
+    <string name="school_adder">信息录入人</string>
+    <string name="dis_student">分配生源</string>
+    <string name="delete_student">删除生源信息</string>
+    <string name="student_back_list">退回池信息</string>
+    <string name="finish_year">毕业年份</string>
+    <string name="predict_score">预估分数</string>
+    <string name="student_soure">生源来源</string>
+    <string name="student_major">意向专业</string>
+    <string name="search">搜索</string>
+    <string name="please_check_school">学校数据有误，请检查</string>
+    <string name="redistribution">重新\n分配</string>
+    <string name="edit_school">编辑学校</string>
+    <string name="school_info">学校详情</string>
+
+    <!--添加学校库 -->
+    <string name="undergradate_number">年本科录取人数</string>
+    <string name="speciaty_number">年高职录取人数</string>
+    <string name="please_input_right_tel">请输入正确的手机号</string>
+    <string name="please_input_tel">请输入手机号</string>
+    <string name="please_input_school_name">请输入学校名称</string>
+    <string name="please_select_school_type">请选择学校库类型</string>
+    <string name="please_select_address">请选择所在地</string>
+    <string name="please_input_address_info">请输入详细地址</string>
+    <string name="please_input_school_contact">请输入学校联系人</string>
+    <string name="please_input_school_contact_duty">请输入学校联系人职务</string>
+    <string name="please_input_school_contact_tel">请输入学校联系人电话</string>
+    <string name="please_input_undergraduate_number">请输入本科录取人数</string>
+    <string name="please_input_specialty_number">请输入高职录取人数</string>
+    <string name="please_select_area_and_leader">请选择区域/负责人</string>
+
+    <string name="please_select_staff">请选择宣传员</string>
+    <string name="title_student_info">生源信息</string>
+    <string name="over_student_info"><![CDATA[查看详情>>]]></string>
+    <string name="connect_record">沟通记录</string>
+    <string name="school_type">学校类型</string>
+    <string name="school_name">学校名称</string>
+    <string name="listing">挂牌</string>
+
+
+    <string name="please_input_dir_name">请输入文件夹名称</string>
+
+
+    <string name="plan_title">招生方案</string>
+
+    <string name="plan_time">时间安排：%s至%s</string>
+    <string name="plan_question">问题与建议</string>
+    <string name="plan_publicity">预计宣传效果</string>
+    <string name="plan_gift_remark">自选礼品需求</string>
+    <string name="plan_way">宣传方式</string>
+    <string name="plan_file_number">预计发放资料</string>
+    <string name="plan_gift_number">礼品需求</string>
+    <string name="plan_make_news">是否制作喜报</string>
+    <string name="plan_address">地址</string>
+    <string name="plan_school">目标学校</string>
+    <string name="plan_name">方案名称</string>
+    <string name="plan_info">方案详情</string>
+    <string name="plan_claim">经费预算</string>
+    <string name="plan_time_label">时间安排</string>
+
+
+    <string name="please_select_start_time">请选择开始时间</string>
+    <string name="please_select_end_time">请选择结束时间</string>
+    <string name="please_input_claim_name">请输入报账名称</string>
+    <string name="please_select_claim_start_time">请输入费用发生开始时间</string>
+    <string name="please_select_claim_end_time">请输入费用发生结束时间</string>
+    <string name="please_input_business_count">请输入出差人数</string>
+    <string name="please_select_plan">请选择关联经费预算</string>
+    <string name="claim_business_info_title">出差费用信息</string>
+    <string name="claim_name">出差报账名称</string>
+    <string name="claim_time">费用发生时间</string>
+    <string name="claim_start_time">开始时间</string>
+    <string name="claim_end_time">结束时间</string>
+    <string name="claim_budget_loan">预算借款费用</string>
+    <string name="claim_actual_cost">实际费用</string>
+    <string name="claim_total_cost">合计费用</string>
+    <string name="claim_other">其它</string>
+    <string name="claim_mail_cost">邮寄费用</string>
+    <string name="claim_private_car_cost">私家车费</string>
+    <string name="claim_personnel_subsidy">人员补助费</string>
+    <string name="claim_hotel_cost">住宿费</string>
+    <string name="claim_entertain_cost">招待费</string>
+    <string name="claim_fuel_cost">燃油费</string>
+    <string name="claim_park_cost">停车费</string>
+    <string name="claim_road_toll">过路费</string>
+    <string name="claim_car_rental_cost">汽车租赁费</string>
+    <string name="claim_public_section_cost">区间公共交通费</string>
+    <string name="claim_back_public_cost">往返公共交通费</string>
+    <string name="claim_train_cost">火车费</string>
+    <string name="claim_business_number">出差人数</string>
+    <string name="claim_title">出差报账</string>
+    <string name="claim_relation">关联</string>
+    <string name="claim_total_travel_person_number">共%d人出差</string>
+
+    <string name="title_feed">招生反馈</string>
+    <string name="title_feed_edit">编辑反馈</string>
+    <string name="title_feed_add">添加反馈</string>
+    <string name="title_feed_info">反馈详情</string>
+
+    <string name="please_input_feed_name">请输入反馈名称</string>
+    <string name="please_select_school">请选择学校</string>
+    <string name="please_input_class_number">请输入毕业班级个数</string>
+    <string name="please_input_student_number">请输入毕业生人数</string>
+    <string name="please_select_fee_type">请选择经费类型</string>
+
+
+    <string name="please_input_plan_name">请输入方案名称</string>
+    <string name="please_input_plan_info">请填写方案详情</string>
+    <string name="please_input_claim">请填写经费预算</string>
+    <string name="please_add_line">请添加线路</string>
+    <string name="please_input_start_address">请输入出发地</string>
+    <string name="please_input_end_address">请输入抵达地</string>
+
+    <string name="plan_fund_type">经费类别</string>
+    <string name="plan_fund">经费预算</string>
+    <string name="plan_room_day_price">日房价</string>
+    <string name="room_unit">间</string>
+    <string name="plan_subdidy">生活补助</string>
+    <string name="plan_other_price">其它费用</string>
+    <string name="plan_other_price_used">其它费用用途</string>
+    <string name="plan_total">合计</string>
+    <string name="please_select_student_target">请选择生源意向</string>
+    <string name="please_select_student_goal">请选择招生层次</string>
+    <string name="please_select_sex">请选择性别</string>
+    <string name="please_input_name">请输入姓名</string>
+    <string name="please_select_finish_school">请选择毕业学校</string>
+    <string name="please_select_subject">请选择所属科类</string>
+    <string name="more_info">更多信息</string>
+    <string name="idcard">身份证号</string>
+    <string name="idcard_six">身份证后六位</string>
+    <string name="current_grade">当前年级</string>
+    <string name="subject">所属科类</string>
+    <string name="finish_school_area">学校所属区域</string>
+    <string name="finish_school">毕业学校</string>
+    <string name="tel">手机号</string>
+    <string name="sex">性别</string>
+    <string name="name">姓名</string>
+    <string name="student_level">招生层次</string>
+    <string name="student_target">生源意向</string>
+    <string name="student_add">添加生源</string>
+    <string name="student_edit">编辑生源</string>
+    <string name="please_input_idcard">请输入身份证号</string>
+    <string name="please_select_target_degree">请选择意向程度</string>
+    <string name="please_input_record">请输入沟通信息</string>
+    <string name="feed_name">反馈名称</string>
+    <string name="feed_person_name">联系人姓名</string>
+    <string name="feed_person_duty">联系人职务</string>
+    <string name="feed_person_tel">联系人电话</string>
+    <string name="feed_time_label">时间安排</string>
+    <string name="feed_busness_day">出差时长</string>
+    <string name="feed_class_info">毕业班情况</string>
+    <string name="feed_class_number">毕业班级个数</string>
+    <string name="feed_class_student_number">毕业生人数</string>
+    <string name="feed_online_number">二本上线人数</string>
+    <string name="feed_school_info">两所独立学院上一季度录取人数</string>
+    <string name="feed_school_cs">城市学院人数</string>
+    <string name="feed_school_hq">华清学院人数</string>
+    <string name="feed_way">宣传方式</string>
+    <string name="feed_intent">特色活动意向</string>
+    <string name="feed_good_news">喜报是否送达</string>
+    <string name="feed_listing">挂牌意愿</string>
+    <string name="feed_visit">来校参观意向</string>
+    <string name="feed_jz_number">发放简章份数</string>
+    <string name="feed_hddy_number">活动单页份数</string>
+    <string name="feed_gift_number">礼品发放份数</string>
+    <string name="feed_good_news_number">发放喜报数</string>
+    <string name="feed_student_number">学生信息人数</string>
+    <string name="feed_other">具体措施</string>
+
+
+</resources>

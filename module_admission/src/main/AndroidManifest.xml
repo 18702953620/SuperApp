@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shenyuan.admission">
+
+    <application>
+        <!--学校库 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.school.SchoolListActivity" />
+        <!--分配目标学校 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.school.DistributionSchoolActivity" />
+        <!--学校删除 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.school.SchoolDeleteActivity" />
+        <!--退回库 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.school.SchoolBackActivity" />
+        <!--分配宣传员 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.school.DistributionPersonActivity" />
+        <!--添加学校 -->
+        <activity
+            android:name="com.shenyuan.superapp.admission.ui.school.AddSchoolActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <!--目标学校 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.school.TargetSchoolActivity" />
+        <!--生源池 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.StudentPoolActivity" />
+        <!--添加生源 -->
+        <activity
+            android:name="com.shenyuan.superapp.admission.ui.student.AddStudentActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <!--学校搜索 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.AddSearchSchoolActivity" />
+        <!--分配生源 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.TargetStudentActivity" />
+        <!--分配生源 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.DistributionStudentActivity" />
+        <!--退回库 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.StudentBackActivity" />
+        <!--生源信息 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.StudentInfoActivity" />
+        <!--添加沟通记录 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.AddRecordActivity" />
+        <!--我的生源 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.MyStudentPoolActivity" />
+        <!--生源删除 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.student.StudentDeleteActivity" />
+        <!--招生资料 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.file.FileActivity" />
+        <!--统一搜索 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.AdmissionSearchActivity" />
+        <!--传输列表 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.file.FileRecordActivity" />
+        <!--招生方案 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.plan.PlanListActivity" />
+        <!--招生方案-添加 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.plan.AddPlanActivity" />
+        <!--招生方案-详情-添加 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.plan.AddPlanInfoActivity" />
+        <!--招生方案-线路 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.plan.AddPlanLineActivity" />
+        <!--招生方案-财务预算 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.plan.AddFundActivity" />
+        <!--招生方案-详情 -->
+        <activity android:name="com.shenyuan.superapp.admission.ui.plan.PlanInfoActivity" />
+        <!--招生反馈-->
+        <activity android:name="com.shenyuan.superapp.admission.ui.feedback.FeedBackListActivity" />
+        <!--招生反馈-添加-->
+        <activity android:name="com.shenyuan.superapp.admission.ui.feedback.AddFeedBackActivity" />
+        <!--出差报账-列表-->
+        <activity android:name="com.shenyuan.superapp.admission.ui.claim.ClaimListActivity" />
+        <!--出差报账-添加-->
+        <activity android:name="com.shenyuan.superapp.admission.ui.claim.AddClaimActivity" />
+        <!--出差报账-关联方案-->
+        <activity android:name="com.shenyuan.superapp.admission.ui.claim.PickPlanActivity" />
+
+    </application>
+</manifest>

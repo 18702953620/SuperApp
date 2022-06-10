@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/color_ffffff"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="2dp"
+        app:cardPreventCornerOverlap="true">
+
+        <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+            android:id="@+id/esm_school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentView="@+id/content"
+            app:rightMenuView="@+id/right">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_school_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/color_333333"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_time"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_school_name"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_school_name" />
+
+                <TextView
+                    android:id="@+id/tv_plan_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_school_name" />
+
+                <LinearLayout
+                    android:id="@+id/ll_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@id/view_line"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/view_line">
+
+                    <com.shenyuan.superapp.base.widget.PSTextView
+                        android:id="@+id/tv_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/color_fc602d"
+                        android:textSize="10sp"
+                        app:ps_border_color="@color/color_fc602d"
+                        app:ps_border_width="1dp"
+                        app:ps_radius="4dp" />
+
+                    <com.shenyuan.superapp.base.widget.PSTextView
+                        android:id="@+id/tv_staff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/color_0077ff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@id/view_line"
+                        app:layout_constraintLeft_toRightOf="@id/tv_area"
+                        app:layout_constraintTop_toTopOf="@id/view_line"
+                        app:ps_border_color="@color/color_0077ff"
+                        app:ps_border_width="1dp"
+                        app:ps_radius="4dp" />
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/view_line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/ic_school_line"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_time" />
+
+                <TextView
+                    android:id="@+id/tv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="毕业班级个数"
+                    android:textColor="@color/color_666666"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toLeftOf="@id/view_line"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/view_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="毕业生人数"
+                    android:textColor="@color/color_666666"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@id/view_line"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_label"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label" />
+
+                <TextView
+                    android:id="@+id/tv_class_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/color_666666"
+                    android:textSize="11sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/view_line"
+                    tools:text="15" />
+
+                <TextView
+                    android:id="@+id/tv_student_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right"
+                    android:textColor="@color/color_666666"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@id/view_line"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="15" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <com.shenyuan.superapp.base.widget.PSTextView
+                    android:id="@+id/tv_top"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="置顶"
+                    android:textColor="@color/color_ff9f00"
+                    android:textSize="17sp"
+                    app:ps_background_color="@color/color_f7e4c4"
+                    app:ps_radius="4dp" />
+
+                <com.shenyuan.superapp.base.widget.PSTextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="编辑"
+                    android:textColor="@color/color_0077ff"
+                    android:textSize="17sp"
+                    app:ps_background_color="@color/color_dbecff"
+                    app:ps_radius="4dp" />
+
+                <com.shenyuan.superapp.base.widget.PSTextView
+                    android:id="@+id/tv_delete"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="@color/color_ff5c5d"
+                    android:textSize="17sp"
+                    app:ps_background_color="@color/color_f7d6d7"
+                    app:ps_radius="4dp" />
+
+
+            </LinearLayout>
+
+        </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

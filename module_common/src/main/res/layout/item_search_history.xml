@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.shenyuan.superapp.base.widget.PSTextView
+        android:id="@+id/tv_search_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="end"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="6dp"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        app:ps_background_color="@color/color_e4e4e4"
+        app:ps_radius="4dp"
+        tools:text="缴费">
+
+
+    </com.shenyuan.superapp.base.widget.PSTextView>
+</layout>
